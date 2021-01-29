@@ -1,9 +1,10 @@
 import s from './index.module.css';
+import classnames from 'classnames';
 
 const Footer = () => {
   return (
     <footer>
-      <div className={s.wrapper}>
+      <div className={classnames(s.wrapper)}>
         <h3>THANKS FOR VISITING</h3>
         <p>© 2021 #ReactMarathon.</p>
       </div>

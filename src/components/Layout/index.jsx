@@ -1,18 +1,18 @@
 import s from './index.module.css';
+import classnames from 'classnames';
 
-const Layout = ({ id, title, desc, urlBg = '', colorBg }) => {
+const Layout = ({ id = 0, title = '', descr = '', urlBg = false, colorBg = '#FFFFFF' }) => {
   const background = urlBg ? { backgroundImage: `url(${urlBg})` } : { backgroundColor: colorBg };
-  console.log(urlBg);
   return (
-    <section className={s.root} id={id} style={background}>
-      <div className={s.wrapper}>
+    <section className={classnames(s.root)} id={id} style={background}>
+      <div className={classnames(s.wrapper)}>
         <article>
           <div className={s.title}>
             <h3>{title}</h3>
-            <span className={s.separator}></span>
+            <span className={classnames(s.separator)}></span>
           </div>
-          <div className={`${s.desc} ${s.full}`}>
-            <p>{desc}</p>
+          <div className={classnames(s.desc, s.full)}>
+            <p>{descr}</p>
           </div>
         </article>
       </div>

@@ -9,10 +9,10 @@ import './index.css';
 function App() {
   return (
     <>
-      <Header title={'This is title'} descr={"This is Description!"} />
-      <Layout urlBg={bg3} />
-      <Layout colorBg="#ff09" />
-      <Layout urlBg={bg2} />
+      <Header title={'This is title'} descr={'This is Description!'} />
+      <Layout title={'This is title'} descr={'This is Description!'} urlBg={bg3} />
+      <Layout title={'This is title'} descr={'This is Description!'} colorBg="#ff09" />
+      <Layout title={'This is title'} descr={'This is Description!'} urlBg={bg2} />
       <Footer />
     </>
   );
